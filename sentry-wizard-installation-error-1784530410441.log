@@ -1,0 +1,18 @@
+npm warn Could not write error message to eresolve-report.txt due to Error: ENOSPC: no space left on device, write
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: vitril@1.0.0
+npm error Found: react@undefined
+npm error node_modules/react
+npm error   react@"19.2.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer react@">=17.0.0" from @sentry/react-native@8.19.0
+npm error node_modules/@sentry/react-native
+npm error   @sentry/react-native@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error A complete log of this run can be found in: C:\Users\USER\AppData\Local\npm-cache\_logs\2026-07-20T06_48_05_461Z-debug-0.log

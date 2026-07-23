@@ -1,0 +1,961 @@
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/shared@4.23.0
+npm warn Found: react@undefined
+npm warn node_modules/@clerk/clerk-js/node_modules/react
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react@"^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" from @clerk/shared@4.23.0
+npm warn node_modules/@clerk/clerk-js/node_modules/@clerk/shared
+npm warn   @clerk/shared@"^4.23.0" from @clerk/clerk-js@6.23.0
+npm warn   node_modules/@clerk/clerk-js
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/shared@4.23.0
+npm warn Found: react-dom@undefined
+npm warn node_modules/@clerk/clerk-js/node_modules/react-dom
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react-dom@"^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" from @clerk/shared@4.23.0
+npm warn node_modules/@clerk/clerk-js/node_modules/@clerk/shared
+npm warn   @clerk/shared@"^4.23.0" from @clerk/clerk-js@6.23.0
+npm warn   node_modules/@clerk/clerk-js
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn node_modules/@clerk/expo
+npm warn   @clerk/expo@"^3.6.5" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@">= 18.2.0" from @react-navigation/bottom-tabs@7.18.3
+npm warn node_modules/@react-navigation/bottom-tabs
+npm warn   @react-navigation/bottom-tabs@"^7.15.5" from expo-router@55.0.16
+npm warn   node_modules/expo-router
+npm warn   1 more (the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@">= 18.2.0" from @react-navigation/elements@2.9.26
+npm warn node_modules/@react-navigation/elements
+npm warn   @react-navigation/elements@"^2.9.26" from @react-navigation/bottom-tabs@7.18.3
+npm warn   node_modules/@react-navigation/bottom-tabs
+npm warn   2 more (@react-navigation/native-stack, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@">= 18.2.0" from @react-navigation/native@7.3.4
+npm warn node_modules/@react-navigation/native
+npm warn   peer @react-navigation/native@"^7.3.4" from @react-navigation/bottom-tabs@7.18.3
+npm warn   node_modules/@react-navigation/bottom-tabs
+npm warn   4 more (@react-navigation/elements, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@">= 18.2.0" from @react-navigation/native@7.3.4
+npm warn node_modules/@react-navigation/native
+npm warn   peer @react-navigation/native@"^7.3.4" from @react-navigation/bottom-tabs@7.18.3
+npm warn   node_modules/@react-navigation/bottom-tabs
+npm warn   4 more (@react-navigation/elements, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@">= 18.2.0" from @react-navigation/native@7.3.4
+npm warn node_modules/@react-navigation/native
+npm warn   peer @react-navigation/native@"^7.3.4" from @react-navigation/bottom-tabs@7.18.3
+npm warn   node_modules/@react-navigation/bottom-tabs
+npm warn   4 more (@react-navigation/elements, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^19.2.0" from react-native@0.83.6
+npm warn node_modules/react-native
+npm warn   peer react-native@">=0.75" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn   40 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@19.2.0
+npm warn node_modules/react
+npm warn   peer react@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   69 more (@expo/devtools, @expo/dom-webview, @expo/log-box, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react@undefined
+npm warn node_modules/react
+npm warn   react@"19.2.0" from the root project
+npm warn   12 more (@solana/wallet-adapter-react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" from @clerk/react@6.11.3
+npm warn node_modules/@clerk/expo/node_modules/@clerk/react
+npm warn   @clerk/react@"^6.11.3" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn node_modules/@clerk/expo
+npm warn   @clerk/expo@"^3.6.5" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react-dom@19.2.0
+npm warn node_modules/react-dom
+npm warn   peerOptional react-dom@"^18.0.0 || ^19.0.0" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm warn     @clerk/expo@"^3.6.5" from the root project
+npm warn   15 more (@expo/metro-runtime, @radix-ui/react-collection, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ^19.0.0" from react-native-web@0.21.2
+npm warn node_modules/react-native-web
+npm warn   peerOptional react-native-web@"*" from expo-image@55.0.11
+npm warn   node_modules/expo-image
+npm warn   3 more (expo-router, expo-system-ui, the root project)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @clerk/react@6.11.3
+npm warn Found: react-dom@undefined
+npm warn node_modules/react-dom
+npm warn   react-dom@"19.2.0" from the root project
+npm warn   1 more (expo-router)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" from @clerk/react@6.11.3
+npm warn node_modules/@clerk/expo/node_modules/@clerk/react
+npm warn   @clerk/react@"^6.11.3" from @clerk/expo@3.6.5
+npm warn   node_modules/@clerk/expo
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: vitril@1.0.0
+npm error Found: @react-navigation/native@undefined
+npm error node_modules/@react-navigation/native
+npm error   @react-navigation/native@"^7.1.33" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer @react-navigation/native@"^7.3.11" from @react-navigation/elements@2.9.33
+npm error node_modules/@react-navigation/elements
+npm error   @react-navigation/elements@"^2.9.10" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\USER\AppData\Local\npm-cache\_logs\2026-07-20T06_58_25_783Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\USER\AppData\Local\npm-cache\_logs\2026-07-20T06_58_25_783Z-debug-0.log

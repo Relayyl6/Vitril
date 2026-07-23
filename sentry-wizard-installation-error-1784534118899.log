@@ -1,0 +1,29 @@
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: vitril@1.0.0
+npm error Found: react@undefined
+npm error node_modules/react
+npm error   react@"19.2.0" from the root project
+npm error   peer react@"*" from expo@55.0.27
+npm error   node_modules/expo
+npm error     expo@"~55.0.27" from the root project
+npm error     peerOptional expo@">=49.0.0" from @sentry/react-native@8.19.0
+npm error     node_modules/@sentry/react-native
+npm error       @sentry/react-native@"*" from the root project
+npm error     2 more (@expo/dom-webview, @expo/metro-runtime)
+npm error   3 more (@expo/dom-webview, @expo/metro-runtime, react-native-webview)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@">=17.0.0" from @sentry/react-native@8.19.0
+npm error node_modules/@sentry/react-native
+npm error   @sentry/react-native@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\USER\AppData\Local\npm-cache\_logs\2026-07-20T07_40_18_515Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\USER\AppData\Local\npm-cache\_logs\2026-07-20T07_40_18_515Z-debug-0.log
