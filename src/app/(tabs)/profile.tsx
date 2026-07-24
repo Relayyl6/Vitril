@@ -132,8 +132,8 @@ const Profile = () => {
               userId: user?.id,
             });
             show(
-              "Sign out successfully",
-              "Leaving so soon from Vitril",
+              "You've successfully signed out",
+              "Leaving so soon from Vitril? ",
               "info",
             );
           } catch (error) {
