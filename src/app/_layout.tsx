@@ -5,6 +5,7 @@ import { tokenCache } from "@clerk/expo/token-cache";
 import * as Sentry from "@sentry/react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect } from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "../../global.css";
 
 const sentryDsn = process.env.EXPO_PUBLIC_SENTRY_DSN;
@@ -52,8 +53,15 @@ function useProtectedRoute() {
 
 // 2. Create a child layout to safely consume the Clerk context
 // app/_layout.tsx
-const InitialLayout = () => {
+const InitialLayout = async () => {
   useProtectedRoute();
+  const token = await fetch("/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ userId: "yemuel" }),
+  });
   return (
     <>
       <Stack screenOptions={{ headerShown: false }}>
@@ -75,7 +83,9 @@ export default function RootLayout() {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <AlertProvider>
-        <InitialLayout />
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <InitialLayout />
+        </GestureHandlerRootView>
       </AlertProvider>
     </ClerkProvider>
   );
