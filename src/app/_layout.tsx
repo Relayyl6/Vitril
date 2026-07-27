@@ -1,11 +1,14 @@
 import { AlertModal } from "@/components/AlertModal";
+import { ChatWrapper } from "@/components/ChatWrapper";
 import { AlertProvider } from "@/context/AlertContext";
+import { AppProvider } from "@/context/AppContext";
 import { ClerkProvider, useAuth } from "@clerk/expo";
 import { tokenCache } from "@clerk/expo/token-cache";
 import * as Sentry from "@sentry/react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import "../../global.css";
 
 const sentryDsn = process.env.EXPO_PUBLIC_SENTRY_DSN;
@@ -53,15 +56,8 @@ function useProtectedRoute() {
 
 // 2. Create a child layout to safely consume the Clerk context
 // app/_layout.tsx
-const InitialLayout = async () => {
+const InitialLayout = () => {
   useProtectedRoute();
-  const token = await fetch("/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ userId: "yemuel" }),
-  });
   return (
     <>
       <Stack screenOptions={{ headerShown: false }}>
@@ -81,12 +77,18 @@ const InitialLayout = async () => {
 
 export default function RootLayout() {
   return (
-    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <AlertProvider>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <InitialLayout />
-        </GestureHandlerRootView>
-      </AlertProvider>
-    </ClerkProvider>
+    <SafeAreaProvider>
+      <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+        <AlertProvider>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <ChatWrapper>
+              <AppProvider>
+                <InitialLayout />
+              </AppProvider>
+            </ChatWrapper>
+          </GestureHandlerRootView>
+        </AlertProvider>
+      </ClerkProvider>
+    </SafeAreaProvider>
   );
 }

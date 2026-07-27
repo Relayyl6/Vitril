@@ -5,11 +5,11 @@ import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import {
-    ActivityIndicator,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -20,7 +20,6 @@ const AuthScreen = () => {
 
   return (
     <View className="flex-1 bg-background">
-      {/* linear gradient background */}
       <View className="absolute inset-0">
         <LinearGradient
           colors={["#0F0E17", "#1A1A2E", "#2D1B69", "#1A1A2E", "#0F0E17"]}
@@ -32,9 +31,9 @@ const AuthScreen = () => {
       </View>
 
       <SafeAreaView className="flex-1 justify-between">
-        {/* Top section: logo + Hero */}
-        <View>
-          <View className="items-center pt-8 pb-2">
+        {/* Top section: logo + hero — takes remaining space, shrinks if needed */}
+        <View className="flex-1 justify-center">
+          <View className="items-center pt-4 pb-2">
             <View className="w-16 h-16 rounded-[20px] bg-primary/15 items-center justify-center border border-primary/20">
               <Ionicons name="school" size={30} color="#A29BFE" />
             </View>
@@ -48,38 +47,45 @@ const AuthScreen = () => {
             </Text>
           </View>
 
-          <View className="items-center mt-4 z-0 relative w-full">
+          {/* Hero image now flexes instead of a fixed height */}
+          <View className="items-center mt-2 z-0 relative flex-1">
             <Image
               source={require("@/assets/images/authe.png")}
               placeholder={{ blurhash }}
-              style={{ width: "100%", height: 450, alignSelf: "center" }} // Set width to 100% to span the screen edges
-              contentFit="cover"
+              style={{
+                width: "70%", // however wide you actually want the picture to appear
+                aspectRatio: 3 / 4, // match the real width:height ratio of your source image
+                alignSelf: "center",
+              }}
+              contentFit="contain"
               transition={1000}
             />
 
             <View
-              className="absolute bottom-6 right-10 rounded-2xl p-1.5 shadow-2xl z-20"
-              style={{
-                transform: [{ rotate: "8deg" }], // Adds a stylish askew angle to the float
-              }}
+              className="absolute bottom-4 right-10 rounded-2xl p-1.5 shadow-2xl z-20"
+              style={{ transform: [{ rotate: "8deg" }] }}
             >
               <Image
                 source={require("@/assets/images/authr.png")}
                 placeholder={{ blurhash }}
-                style={{ width: 160, height: 200, borderRadius: 12 }}
-                contentFit="cover"
+                style={{
+                  width: 120,
+                  aspectRatio: 4 / 5, // match this image's real ratio too
+                  borderRadius: 12,
+                }}
+                contentFit="contain"
                 transition={1000}
               />
             </View>
           </View>
 
-          <View className="flex-row flex-wrap justify-center gap-3 px-6 mt-5 z-10">
+          <View className="flex-row flex-wrap justify-center gap-2 px-6 mt-3 z-10">
             {pills.map((chip) => (
               <View
                 key={chip.label}
-                className={`flex-row items-center gap-1.5 px-3.5 py-2 rounded-full border ${chip.bg}`}
+                className={`flex-row items-center gap-1.5 px-3 py-1.5 rounded-full border ${chip.bg}`}
               >
-                <Ionicons name={chip.icon} size={14} color={chip.color} />
+                <Ionicons name={chip.icon} size={13} color={chip.color} />
                 <Text className="text-foreground-muted text-xs font-semibold tracking-wide">
                   {chip.label}
                 </Text>
@@ -88,8 +94,9 @@ const AuthScreen = () => {
           </View>
         </View>
 
+        {/* Bottom section: fixed content, doesn't flex */}
         <View className="px-8 pb-4">
-          <View className="flex-row items-center gap-3 my-6">
+          <View className="flex-row items-center gap-3 my-4">
             <View className="h-px flex-1 bg-border" />
             <Text className="text-foreground-subtle text-xs font-medium tracking-widest uppercase">
               Continue With
@@ -97,17 +104,14 @@ const AuthScreen = () => {
             <View className="h-px flex-1 bg-border" />
           </View>
 
-          <View className="flex-row justify-center items-center gap-4 mb-5">
+          <View className="flex-row justify-center items-center gap-4 mb-4">
             {authProviders.map((provider) => {
               const isThisProviderLoading = loadingStrategy === provider.id;
-
               return (
                 <Pressable
                   key={provider.id}
-                  className={`size-20 rounded-2xl items-center justify-center active:scale-95 shadow-lg ${provider.bgClass} ${provider.shadowClass}`}
-                  style={({ pressed }) => ({
-                    opacity: pressed ? 0.85 : 1,
-                  })}
+                  className={`size-16 rounded-2xl items-center justify-center active:scale-95 shadow-lg ${provider.bgClass} ${provider.shadowClass}`}
+                  style={({ pressed }) => ({ opacity: pressed ? 0.85 : 1 })}
                   accessibilityRole="button"
                   accessibilityLabel={`Continue with ${provider.name}`}
                   disabled={isLoading}
@@ -118,7 +122,7 @@ const AuthScreen = () => {
                   ) : provider.name === "Google" ? (
                     <Image
                       source={provider.logo}
-                      style={[{ width: 28, height: 28 }, provider.imageStyle]}
+                      style={[{ width: 24, height: 24 }, provider.imageStyle]}
                       contentFit="contain"
                     />
                   ) : (
@@ -126,7 +130,7 @@ const AuthScreen = () => {
                       name={
                         provider.name === "Apple" ? "logo-apple" : "logo-github"
                       }
-                      size={28}
+                      size={24}
                       color="#FFFFFE"
                     />
                   )}

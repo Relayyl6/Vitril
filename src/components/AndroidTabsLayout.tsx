@@ -250,20 +250,21 @@ export default function AndroidTabsLayout() {
 
 const styles = StyleSheet.create({
   tabBarContainer: {
+    // flex: 1,
     flexDirection: "row",
     backgroundColor: "#FFFFFF",
     // width: "85%",
     height: 70,
     borderRadius: 35,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     paddingHorizontal: 12,
     // marginHorizontal: 12,
     gap: 20,
     elevation: 6,
   },
   tabButton: {
-    flex: 1,
+    // flex: 1,
     alignItems: "center",
     justifyContent: "center",
     height: "100%",

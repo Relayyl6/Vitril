@@ -63,7 +63,7 @@ const useSocialAuth = () => {
       // console.error("Auth error details:", JSON.stringify(error, null, 2));
       console.error("Auth error details:", JSON.stringify(error, null, 2));
       show(
-        "Error occurred",
+        "An Error occurred",
         `Failed to sign in with ${providerName(strategy)}. Please try again.`,
         "error",
       );
