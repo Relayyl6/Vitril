@@ -213,6 +213,7 @@
 // export default Explore;
 
 import { useAppContext } from "@/context/AppContext";
+import useStreamUsers from "@/hooks/useStreamUsers";
 import { useUser } from "@clerk/expo";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -227,7 +228,14 @@ const Explore = () => {
   const [creating, setCreating] = useState<string | null>(null);
   const [searchValue, setSearchValue] = useState("");
 
-  const { users } = useStreamUsers(client, userId);
+  const { users, loading } = useStreamUsers(client, userId);
+
+  const { handleStartChat } = useStartChat(
+    client,
+    userId,
+    setChannel,
+    setCreating,
+  );
 
   return (
     <View>
