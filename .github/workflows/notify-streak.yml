@@ -1,0 +1,20 @@
+name: Daily Study Streak Notifier
+
+on:
+  # 1. Runs automatically every day at 18:00 UTC (6:00 PM)
+  schedule:
+    - cron: "0 18 * * *"
+
+  # 2. Allows you to manually click "Run workflow" from the GitHub Actions UI to test it immediately!
+  workflow_dispatch:
+
+jobs:
+  notify-at-risk-users:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Streak Push Notifications
+        run: |
+          curl -X POST "${{ secrets.API_BASE_URL }}/api/notify-streak" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            -i
