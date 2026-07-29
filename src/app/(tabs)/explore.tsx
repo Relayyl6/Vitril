@@ -212,11 +212,26 @@
 
 // export default Explore;
 
+import ExploreUserCard from "@/components/ExploreUserCard";
+import ListEmptyComponent from "@/components/ListEmptyComponent";
 import { useAppContext } from "@/context/AppContext";
+import useStartChat from "@/hooks/usestartChat";
 import useStreamUsers from "@/hooks/useStreamUsers";
+import { COLORS } from "@/lib/theme";
 import { useUser } from "@clerk/expo";
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+import { useState } from "react";
+import {
+    ActivityIndicator,
+    FlatList,
+    Pressable,
+    RefreshControl,
+    Text,
+    View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import type { UserResponse } from "stream-chat";
 import { useChatContext } from "stream-chat-expo";
 
 const Explore = () => {
@@ -224,26 +239,121 @@ const Explore = () => {
   const { user } = useUser();
   const { client } = useChatContext();
   const userId = user?.id ?? "";
+  const router = useRouter();
 
   const [creating, setCreating] = useState<string | null>(null);
-  const [searchValue, setSearchValue] = useState("");
+  const [refreshing, setRefreshing] = useState(false);
 
-  const { users, loading } = useStreamUsers(client, userId);
+  // Assumes useStreamUsers can expose `error` + `refetch` — add these to the
+  // hook if it doesn't already. Falling back gracefully if it doesn't.
+  const { users, loading, error, refetch } = useStreamUsers(client, userId) as {
+    users: UserResponse[];
+    loading: boolean;
+    error?: unknown;
+    refetch?: () => Promise<void>;
+  };
 
-  const { handleStartChat } = useStartChat(
+  const { handleStartChat } = useStartChat({
     client,
     userId,
     setChannel,
     setCreating,
+  });
+
+  // TODO: wire this to your video call SDK once call-starting logic exists.
+  const handleStartCall = (targetId: string) => {
+    console.warn("Call flow not yet implemented for", targetId);
+  };
+
+  const handleEndCall = (targetId: string) => {
+    console.warn("Call flow not yet implemented for", targetId);
+  };
+
+  const onRefresh = async () => {
+    if (!refetch) return;
+    setRefreshing(true);
+    try {
+      await refetch();
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const renderUserItem = ({ item }: { item: UserResponse }) => (
+    <ExploreUserCard
+      item={item}
+      creating={creating}
+      onStartChat={handleStartChat}
+      onStartCall={handleStartCall}
+    />
   );
 
   return (
-    <View>
-      <Text>Explore</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-background">
+      {/* Header */}
+      <View className="px-5 pt-3 pb-1">
+        <Text className="text-[20px] font-bold text-foreground">Explore</Text>
+        <Text className="text-sm text-foreground-muted">
+          Find people to chat and call
+        </Text>
+      </View>
+
+      {/* search bar — launcher only, real filtering lives in /search */}
+      <Pressable
+        onPress={() => router.push("/search")}
+        className="flex-row items-center bg-surface mx-5 mb-4 px-3.5 py-2.5 rounded-2xl gap-2.5 border border-border"
+        accessibilityRole="button"
+        accessibilityLabel="Search chats and people"
+      >
+        <Ionicons name="search" size={18} color={COLORS.textMuted} />
+        <Text className="flex-1 text-[15px] text-foreground-muted py-1">
+          Search Vitril.xyz...
+        </Text>
+      </Pressable>
+
+      {/* users list */}
+      {loading ? (
+        <View className="flex-1 items-center justify-center pt-10">
+          <ActivityIndicator size="large" color={COLORS.primary} />
+        </View>
+      ) : error ? (
+        <View className="flex-1 items-center justify-center px-10">
+          <Ionicons
+            name="alert-circle-outline"
+            size={40}
+            color={COLORS.textMuted}
+          />
+          <Text className="text-sm text-foreground-muted mt-3 text-center">
+            Couldn't load people right now.
+          </Text>
+          {refetch && (
+            <Pressable
+              onPress={onRefresh}
+              className="mt-4 px-4 py-2 rounded-xl bg-surface border border-border"
+            >
+              <Text className="text-sm font-semibold text-foreground">
+                Try again
+              </Text>
+            </Pressable>
+          )}
+        </View>
+      ) : (
+        <FlatList
+          data={users}
+          renderItem={renderUserItem}
+          keyExtractor={(item) => item.id}
+          contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
+          showsVerticalScrollIndicator={false}
+          refreshControl={
+            refetch ? (
+              <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+            ) : undefined
+          }
+          ListEmptyComponent={() => <ListEmptyComponent />}
+        />
+      )}
+    </SafeAreaView>
   );
 };
 
 export default Explore;
-
-const styles = StyleSheet.create({});

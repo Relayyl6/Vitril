@@ -288,7 +288,7 @@ export const studyBuddyTheme: DeepPartial<Theme> = {
       fileSize: { color: COLORS.textMuted },
       title: { color: COLORS.text, fontWeight: "normal" },
     },
-    pinnedHeader: { container: { display: "none" } },
+    pinnedHeader: { container: { display: "none", borderRadius: 16 } },
     content: {
       textContainer: {
         maxWidth: vw(80),
@@ -327,6 +327,14 @@ export const studyBuddyTheme: DeepPartial<Theme> = {
       },
       metaText: {
         color: COLORS.textSubtle,
+      },
+      receiverMessage: {
+        backgroundColor: "#FFFFFF", // White for received
+        color: "#000000",
+      },
+      myMessage: {
+        backgroundColor: "#1E1E1E", // Black for sent
+        color: "#FFFFFF",
       },
     },
 

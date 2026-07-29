@@ -1,116 +1,108 @@
+// Inside useUserPresence.ts
 import { useAuth } from "@clerk/expo";
-import { useCallback, useEffect, useState } from "react";
+import * as Sentry from "@sentry/react-native";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AppState, AppStateStatus } from "react-native";
 
-type PresenceStatus = "online" | "away" | "dnd" | "offline";
-
-interface PresenceOptions {
-  autoAwayAfterMs?: number; // Switch to "away" if inactive for N ms
-  syncInterval?: number; // Heartbeat to backend every N ms
-}
-
-/**
- * Manages user presence state across the app.
- *
- * Architecture:
- * - Local state updates instantly (optimistic UI)
- * - Syncs to backend via POST on every change
- * - Auto-sync heartbeat every 30s (proves user is still there)
- * - Switches to "away" automatically if app backgrounded
- * - Cleanup on unmount (sets presence to "offline")
- *
- * Why this pattern?
- * - Presence is social state; peers need to know if you can be reached
- * - Optimistic local updates = responsive UI
- * - Backend heartbeat + AppState listener = reliable state sync
- * - Auto-away = prevents stale "online" when user leaves without closing app
- * - Offline on unmount = cleanup signal to backend
- */
 export const useUserPresence = (
-  options: PresenceOptions = {
-    autoAwayAfterMs: 10 * 60 * 1000, // 10 minutes
-    syncInterval: 30 * 1000, // 30 seconds
+  options = {
+    autoAwayAfterMs: 10 * 60 * 1000,
+    syncInterval: 30 * 1000,
   },
 ) => {
-  const { userId, getToken } = useAuth();
-  const [presence, setPresence] = useState<PresenceStatus>("online");
+  // 1. Grab isLoaded to prevent premature network calls
+  const { isLoaded, userId, getToken } = useAuth();
+  const [presence, setPresence] = useState<
+    "online" | "away" | "dnd" | "offline"
+  >("online");
   const [syncing, setSyncing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Sync presence to backend
+  // Keep a ref so the interval always fires the freshest state without re-triggering useEffect
+  const presenceRef = useRef(presence);
+  presenceRef.current = presence;
+
   const syncPresenceToBackend = useCallback(
-    async (status: PresenceStatus) => {
-      if (!userId) return;
+    async (status: "online" | "away" | "dnd" | "offline") => {
+      // 2. Abort immediately if Clerk hasn't initialized or user is logged out
+      if (!isLoaded || !userId) return;
 
       setSyncing(true);
       setError(null);
 
       try {
-        const token = await getToken(); // <-- Fetch active JWT
+        const token = await getToken();
+        if (!token) throw new Error("No authentication token available");
 
         const response = await fetch(`/api/users/${userId}/presence`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`, // <-- Send token to Expo API
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({ status, timestamp: new Date().toISOString() }),
         });
 
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+        }
       } catch (err) {
-        // ... existing error handling
+        const errorMsg = err instanceof Error ? err.message : "Sync failed";
+        setError(errorMsg);
+        Sentry.captureException(err, {
+          tags: { context: "useUserPresence" },
+          extra: { userId, attemptedStatus: status },
+        });
+      } finally {
+        setSyncing(false);
       }
     },
-    [userId, getToken],
+    [isLoaded, userId, getToken],
   );
+
+  // 3. GUARANTEE INITIAL ROW CREATION: Fire as soon as Clerk confirms the user is loaded
+  useEffect(() => {
+    if (isLoaded && userId) {
+      syncPresenceToBackend("online");
+    }
+  }, [isLoaded, userId, syncPresenceToBackend]);
 
   // Handle app foreground/background
   useEffect(() => {
-    const subscription = AppState.addEventListener("change", handleAppState);
-
-    async function handleAppState(state: AppStateStatus) {
-      if (state === "background") {
-        setPresence("away");
-        await syncPresenceToBackend("away");
-      } else if (state === "active") {
-        setPresence("online");
-        await syncPresenceToBackend("online");
-      }
-    }
+    const subscription = AppState.addEventListener(
+      "change",
+      (state: AppStateStatus) => {
+        if (state === "background") {
+          setPresence("away");
+          syncPresenceToBackend("away");
+        } else if (state === "active") {
+          setPresence("online");
+          syncPresenceToBackend("online");
+        }
+      },
+    );
 
     return () => subscription.remove();
   }, [syncPresenceToBackend]);
 
-  // Periodic heartbeat sync (keeps presence "alive" on backend)
+  // Periodic heartbeat
   useEffect(() => {
+    if (!isLoaded || !userId) return;
+
     const interval = setInterval(() => {
-      syncPresenceToBackend(presence);
+      syncPresenceToBackend(presenceRef.current);
     }, options.syncInterval);
 
     return () => clearInterval(interval);
-  }, [presence, options.syncInterval, syncPresenceToBackend]);
+  }, [isLoaded, userId, options.syncInterval, syncPresenceToBackend]);
 
-  // Cleanup: set to offline when component unmounts (user logs out)
-  useEffect(() => {
-    return () => {
-      syncPresenceToBackend("offline");
-    };
-  }, [syncPresenceToBackend]);
-
-  // Main setter: update local state + sync to backend
   const updatePresence = useCallback(
-    async (newStatus: PresenceStatus) => {
+    async (newStatus: "online" | "away" | "dnd" | "offline") => {
       setPresence(newStatus);
       await syncPresenceToBackend(newStatus);
     },
     [syncPresenceToBackend],
   );
 
-  return {
-    presence,
-    setPresence: updatePresence,
-    syncing,
-    error,
-  };
+  return { presence, setPresence: updatePresence, syncing, error };
 };
