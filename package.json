@@ -63,7 +63,9 @@
   "devDependencies": {
     "@clerk/types": "^4.101.26",
     "@types/react": "~19.2.2",
-    "typescript": "~5.9.2"
+    "bufferutil": "^4.1.0",
+    "typescript": "~5.9.2",
+    "utf-8-validate": "^6.0.6"
   },
   "private": true
 }
