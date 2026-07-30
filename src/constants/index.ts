@@ -50,15 +50,27 @@ export const authProviders = [
 
 export const MENU_ITEMS = [
   {
-    icon: "notification-outline",
+    id: "notifications", // This matches app/profile/notifications.tsx
+    icon: "notifications-outline", // Note: Ionicons uses "notifications-outline" with an 's'
     label: "Notifications",
     color: COLORS.primary,
   },
-  { icon: "bookmark-outline", label: "Saved Resources", color: COLORS.accent },
   {
+    id: "saved-resources",
+    icon: "bookmark-outline",
+    label: "Saved Resources",
+    color: COLORS.accent,
+  },
+  {
+    id: "study-history",
     icon: "time-outline",
     label: "Study History",
     color: COLORS.accentSecondary,
   },
-  { icon: "settings-outline", label: "Settings", color: COLORS.textMuted },
+  {
+    id: "settings",
+    icon: "settings-outline",
+    label: "Settings",
+    color: COLORS.textMuted,
+  },
 ];

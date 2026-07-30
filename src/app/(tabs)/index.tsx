@@ -27,7 +27,7 @@ const Chats = () => {
   const handleSelectChannel = useCallback(
     (channel: Channel) => {
       setChannel(channel);
-      router.push(`/channel/${channel.id}`);
+      router.push(`/channel/${channel.cid}`);
     },
     [router, setChannel],
   );

@@ -223,12 +223,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
-    ActivityIndicator,
-    FlatList,
-    Pressable,
-    RefreshControl,
-    Text,
-    View,
+  ActivityIndicator,
+  FlatList,
+  Pressable,
+  RefreshControl,
+  Text,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import type { UserResponse } from "stream-chat";
@@ -237,6 +237,7 @@ import { useChatContext } from "stream-chat-expo";
 const Explore = () => {
   const { setChannel } = useAppContext();
   const { user } = useUser();
+  const { channel } = useAppContext();
   const { client } = useChatContext();
   const userId = user?.id ?? "";
   const router = useRouter();
@@ -253,7 +254,7 @@ const Explore = () => {
     refetch?: () => Promise<void>;
   };
 
-  const { handleStartChat } = useStartChat({
+  const { handleStartChat, handleStartSelfChat } = useStartChat({
     client,
     userId,
     setChannel,
@@ -263,6 +264,10 @@ const Explore = () => {
   // TODO: wire this to your video call SDK once call-starting logic exists.
   const handleStartCall = (targetId: string) => {
     console.warn("Call flow not yet implemented for", targetId);
+    router.push({
+      pathname: "/call/[callId]",
+      params: { callId: channel?.id },
+    });
   };
 
   const handleEndCall = (targetId: string) => {
@@ -338,19 +343,33 @@ const Explore = () => {
           )}
         </View>
       ) : (
-        <FlatList
-          data={users}
-          renderItem={renderUserItem}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
-          showsVerticalScrollIndicator={false}
-          refreshControl={
-            refetch ? (
-              <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-            ) : undefined
-          }
-          ListEmptyComponent={() => <ListEmptyComponent />}
-        />
+        <>
+          <Pressable
+            onPress={handleStartSelfChat}
+            disabled={creating !== null}
+            className="flex-row items-center bg-surface rounded-2xl p-3.5 mb-2.5 border border-border gap-3.5"
+          >
+            <View className="w-12 h-12 rounded-full bg-primary/20 items-center justify-center">
+              <Ionicons name="bookmark" size={20} color={COLORS.primary} />
+            </View>
+            <Text className="text-base font-semibold text-foreground">
+              Notes to Self
+            </Text>
+          </Pressable>
+          <FlatList
+            data={users}
+            renderItem={renderUserItem}
+            keyExtractor={(item) => item.id}
+            contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 20 }}
+            showsVerticalScrollIndicator={false}
+            refreshControl={
+              refetch ? (
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+              ) : undefined
+            }
+            ListEmptyComponent={() => <ListEmptyComponent />}
+          />
+        </>
       )}
     </SafeAreaView>
   );

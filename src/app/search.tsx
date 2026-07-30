@@ -95,7 +95,7 @@ export default function SearchScreen() {
   const openChannel = useCallback(
     (channel: Channel) => {
       setChannel(channel);
-      router.replace(`/channel/${channel.id}`);
+      router.replace(`/channel/${channel.cid}`);
     },
     [router, setChannel],
   );

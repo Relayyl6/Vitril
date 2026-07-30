@@ -1,88 +1,136 @@
-import EmptyState from "@/components/EmptyState";
+import Avatar from "@/components/Avatar";
+import { CustomInput } from "@/components/CustomMessageInput";
 import FullScreenLoader from "@/components/FullScreenLoader";
+import GroupAvatar from "@/components/GroupAvatar";
+import {
+    CustomSuggestionHeader,
+    StreamButton,
+} from "@/components/StreamButton";
 import { useAppContext } from "@/context/AppContext";
+import { COLORS } from "@/lib/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useHeaderHeight } from "@react-navigation/elements";
-import { Stack, useRouter } from "expo-router";
-import React from "react";
-import { Pressable, View } from "react-native";
+import { useNavigation, useRouter } from "expo-router";
+import React, { useLayoutEffect } from "react";
+import { Pressable, Text, View } from "react-native";
 import type { LocalMessage } from "stream-chat";
 import {
     Channel,
-    MessageInput,
+    MessageComposer,
     MessageList,
     useChatContext,
+    WithComponents,
 } from "stream-chat-expo";
-// Note: If MessageInput still fails, change the above line to import from 'stream-chat-react-native'
 
 const ChannelScreen = () => {
   const { channel, setThread } = useAppContext();
   const { client } = useChatContext();
   const router = useRouter();
+  const navigation = useNavigation();
   const headerHeight = useHeaderHeight();
-
-  let displayName = "Unknown User";
-  let avatarUrl = "";
-
-  if (channel) {
-    const members = Object.values(channel.state.members);
-    const otherMember = members.find(
-      (member) => member.user_id !== client.userID,
-    );
-    displayName = (otherMember?.user?.name as string) || "User";
-    avatarUrl = otherMember?.user?.image || "";
-  }
 
   if (!channel) return <FullScreenLoader message="Loading study room ..." />;
 
-  return (
-    <View className="flex-1 bg-[#F4F6F5]">
-      {/* 
-        Customizing the Header to match the UI image: 
-        Centered Title, rounded back button, rounded ellipsis button.
-      */}
-      <Stack.Screen
-        options={{
-          headerTitle: displayName,
-          headerTitleAlign: "center",
-          headerStyle: { backgroundColor: "#F4F6F5" },
-          headerShadowVisible: false,
-          headerLeft: () => (
-            <Pressable
-              onPress={() => router.back()}
-              className="h-10 w-10 items-center justify-center rounded-full bg-white ml-2 shadow-sm"
-            >
-              <Ionicons name="arrow-back" size={20} color="black" />
-            </Pressable>
-          ),
-          headerRight: () => (
-            <Pressable className="h-10 w-10 items-center justify-center rounded-full bg-white mr-2 shadow-sm">
-              <Ionicons name="ellipsis-horizontal" size={20} color="black" />
-            </Pressable>
-          ),
-        }}
-      />
+  const members = Object.values(channel.state.members);
+  const otherMembers = members.filter((m) => m.user_id !== client.userID);
+  const isSelfChat = otherMembers.length === 0 && members.length === 1;
+  const isGroup = otherMembers.length > 1;
 
-      <Channel channel={channel} keyboardVerticalOffset={headerHeight}>
+  const displayName = isSelfChat
+    ? "You (Notes to Self)"
+    : isGroup
+      ? (channel.data?.name as string | undefined) || "Group"
+      : otherMembers[0]?.user?.name || "Unknown User";
+
+  const headerAvatar = isSelfChat ? (
+    <Avatar
+      size={32}
+      name={client.user?.name as string}
+      image={client.user?.image}
+    />
+  ) : isGroup ? (
+    <GroupAvatar
+      size={32}
+      members={otherMembers.map((m) => ({
+        name: m.user?.name,
+        image: m.user?.image,
+      }))}
+    />
+  ) : (
+    <Avatar size={32} name={displayName} image={otherMembers[0]?.user?.image} />
+  );
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: true,
+      headerTitleAlign: "center",
+      headerStyle: {
+        backgroundColor: "#FFFFFF",
+        // elevation: 0,
+      },
+      headerShadowVisible: false,
+      headerTintcolor: COLORS.text,
+      headerTitle: () => (
+        <View className="flex-row items-center gap-3">
+          {headerAvatar}
+          <Text
+            className="text-sm font-semibold text-foreground"
+            numberOfLines={1}
+          >
+            {displayName}
+          </Text>
+        </View>
+      ),
+      headerLeft: () => (
+        <Pressable
+          onPress={() => router.back()}
+          className="h-10 w-10 items-center justify-center bg-gray-100 rounded-full ml-4"
+          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+        >
+          <Ionicons name="arrow-back" size={24} color="#1A1A1A" />
+        </Pressable>
+      ),
+      headerRight: () => (
+        <Pressable
+          className="h-10 w-10 items-center justify-center bg-gray-100 rounded-full mr-4"
+          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+        >
+          <Ionicons name="ellipsis-horizontal" size={24} color="#1A1A1A" />
+        </Pressable>
+      ),
+    });
+  }, [navigation, displayName, channel?.cid, channel?.id]);
+
+  return (
+    <View className="flex-1 bg-white">
+      <Channel
+        channel={channel}
+        keyboardVerticalOffset={headerHeight}
+        additionalTextInputProps={{
+          style: { color: COLORS.primary },
+          placeholder: "Type a message",
+          placeholderTextColor: "blue",
+        }}
+        audioRecordingEnabled={true}
+      >
         <MessageList
-          // Moved EmptyStateIndicator here to fix the TypeScript error
-          EmptyStateIndicator={() => (
-            <EmptyState
-              icon="book-outline"
-              title="No messages yet"
-              subtitle="Start a study conversation"
-            />
-          )}
           onThreadSelect={(thread) => {
             setThread(thread as LocalMessage);
-            // Cast as Href to bypass Expo Router's strict literal string typing
-            // Note: Use thread.id rather than thread.cid for standard messages
-            router.push(`/channel/${channel.cid}/thread/${thread.id}`);
+            router.push(`/channel/${channel?.cid}/thread/${thread?.cid}`);
           }}
         />
-
-        <View className="pb-5 px-2 bg-transparent">
-          <MessageInput />
+        <View>
+          {/* <MessageComposer /> */}
+          <WithComponents
+            overrides={{
+              Input: CustomInput,
+              SendButton: StreamButton,
+              //   AttachButton: CustomAttachButton,
+              AutoCompleteSuggestionHeader: CustomSuggestionHeader,
+            }}
+          >
+            <MessageComposer audioRecordingSendOnComplete={false} />
+          </WithComponents>
         </View>
       </Channel>
     </View>

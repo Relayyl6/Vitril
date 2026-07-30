@@ -83,6 +83,9 @@ export const studyBuddyTheme: DeepPartial<Theme> = {
       fontSize: 12,
     },
   },
+  semantics: {
+    chatBgOutgoing: "#81c784",
+  }
   imageGallery: {
     backgroundColor: COLORS.background,
     slide: {
@@ -190,7 +193,6 @@ export const studyBuddyTheme: DeepPartial<Theme> = {
       backgroundColor: COLORS.surfaceLight,
     },
   },
-
   messageInput: {
     container: {
       backgroundColor: COLORS.surface,

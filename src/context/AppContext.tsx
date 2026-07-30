@@ -5,7 +5,7 @@ type AppContextType = {
   channel: Channel | null;
   setChannel: (channel: Channel) => void;
   thread: LocalMessage | null;
-  setThread: (thread: LocalMessage) => void;
+  setThread: (thread: LocalMessage | null) => void;
 };
 
 export const AppContext = createContext<AppContextType>({

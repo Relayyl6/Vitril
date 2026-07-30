@@ -12,8 +12,8 @@ const useStreamUsers = (client: StreamChat, userId: string) => {
       try {
         const response = await client.queryUsers(
           {
-            id: { $nin: [userId] },
-            role: { $nin: ["admin"] },
+            // id: { $nin: [userId] },
+            role: { $in: ["user"] },
           } as any,
           {
             last_active: -1,
