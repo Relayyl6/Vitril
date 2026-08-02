@@ -8,14 +8,17 @@
       "node": "24.14.1"
     },
     "development": {
+      "node": "24.14.1",
       "developmentClient": true,
       "distribution": "internal"
     },
     "preview": {
+      "node": "24.14.1",
       "distribution": "internal",
       "extends": "base"
     },
     "production": {
+      "node": "24.14.1",
       "autoIncrement": true,
       "extends": "base"
     }
